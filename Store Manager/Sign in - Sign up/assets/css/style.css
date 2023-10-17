@@ -1,0 +1,514 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1;
+}
+
+.logo {
+    font-size: 32px;
+    color: #fff;
+    user-select: none;
+
+}
+
+.navigation a {
+    font-size: 1.1em;
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    left: 0;
+    bottom: -6px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navigation a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.navigation .btnLogin-popup {
+    width: 130px;
+    height: 50px;
+    border: 2px solid #fff;
+    color: #fff;
+    background: transparent;
+    font-size: 1.1em;
+    font-weight: 500;
+    outline: none;
+    border-radius: 6px;
+    margin-left: 40px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.navigation .btnLogin-popup:hover {
+    background-color: #fff;
+    color: #162938;
+
+}
+
+
+.container {
+    background: url('./img/background2.jpg') no-repeat;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-box {
+    border: 2px solid #fff;
+    border-radius: 16px;
+    width: 400px;
+    min-height: 450px;
+    background: transparent;
+    backdrop-filter: blur(15px);
+    align-items: center;
+    justify-content: center;
+    display: none;
+    animation: open 0.3s;
+    overflow: hidden;
+}
+
+@keyframes open {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
+.icon-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.icon-close i:hover{
+    color: #dadada;
+}
+
+h2 {
+    font-size: 32px;
+    color: #fff;
+    text-align: center;
+
+}
+
+.form-control {
+    position: relative;
+    margin: 30px 0;
+    width: 310px;
+    border-bottom: 2px solid #fff;
+}
+
+.form-control label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 16px;
+    transition: 0.5s;
+}
+
+input:focus ~ label,
+input:valid ~ label{
+    top: -5px;
+    font-size: 0.8em;
+}
+
+.form-control input{
+    width: 90%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 0 35px 0 5px;
+    color: #fff;
+}
+
+.form-control i {
+    position: absolute;
+    right: 8px;
+    top: 20px;
+    font-size: 1.2em;
+    color: #fff;
+}
+
+.show-password:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.remember-forget {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.remember-forget label input {
+    margin-right: 4px;
+    transform: translateY(2px);
+    accent-color: #72354d6b;
+}
+
+.remember-forget label:hover {
+    cursor: pointer;
+}
+
+.remember-forget a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.remember-forget a:hover {
+    text-decoration: underline;
+}
+
+.form-box form button {
+    width: 100%;
+    border-radius: 40px;
+    height: 48px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+}
+
+.form-box form button:hover {
+    background: #dadada;
+}
+
+.form-book {
+    border: 2px solid #fff;
+    border-radius: 16px;
+    width: 400px;
+    min-height: 470px;
+    background: transparent;
+    backdrop-filter: blur(15px);
+    align-items: center;
+    justify-content: center;
+    display: none;
+    animation: open 0.3s;
+    overflow: hidden;
+}
+
+.form-book .form-control {
+    margin: 20px 0;
+}
+
+
+.form-book .form-control input:focus ~ label,
+.form-book .form-control input:valid ~ label{
+    top: 5px;
+    font-size: 0.8em;
+}
+
+.time-date{
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 0;
+}
+
+.time-date input{
+    outline: none;
+    border-bottom: 2px solid #fff;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: transparent;
+    color: #fff;
+    font-size: 16px;
+    height: 40px;
+    width: 45%;
+}
+
+.time-date input[type="date"]::-webkit-calendar-picker-indicator {
+    background-color: #fff;
+    padding: 4px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.time-date input[type="time"]::-webkit-calendar-picker-indicator {
+    background-color: #fff;
+    padding: 4px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.form-book button{
+    width: 100%;
+    border-radius: 40px;
+    height: 48px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.form-book button:hover {
+    background: #dadada;
+}
+
+.appear {
+    display: flex;
+}
+
+.form-contact {
+    position: relative;
+    width: 800px;
+    height: 470px;
+    background: #ccc;
+    border: 2px solid #fff;
+    background: transparent;
+    border-radius: 16px;
+    backdrop-filter: blur(15px);
+    display: none;
+    animation: open 0.3s;
+}
+
+.form-contact h2 {
+    padding: 20px 0;
+}
+
+.box-contact {
+    display: flex;
+    width: 100%;
+    height: calc(100% - 88px);
+}
+
+
+
+.information {
+    flex-basis: 50%;
+    height: 100%;
+    padding: 15px 30px;
+}
+
+.contact-item {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+.contact-item i {
+    color: #fff;
+}
+
+.contact-item p{
+    color: #fff;
+    font-size: 1em;
+    margin-top: 4px;
+}
+
+.contact-item h3 {
+    color: #97FFFF;
+    display: inline-block;
+    margin-left: 6px;
+}
+
+.message {
+    flex-basis: 50%;
+    height: 100%;
+}
+
+.contact-footer {
+    display: inline-block;
+}
+
+.contact-footer h3{
+    font-size: 1.1em;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.footer-icon{
+    display: flex;
+    justify-content: space-around;
+}
+
+#facebook,
+#tiktok,
+#instagram{
+    font-size: 1.5em;
+    background-color: transparent;
+    color: #fff;
+}
+
+#tiktok {
+    animation-delay: 0.3s;
+}
+#instagram {
+    animation-delay: 0.7s;
+}
+
+@keyframes animate {
+    from {
+        filter: hue-rotate(0deg);
+    }
+    to {
+        filter: hue-rotate(360deg);
+    }
+}
+
+#facebook,
+#tiktok,
+#instagram{
+    font-size: 1.5em;
+    background-color: transparent;
+    color: #fff;
+    border-radius: 9px;
+    transition: transform 0.3s ease-in-out;
+
+}
+
+#facebook:hover,
+#tiktok:hover,
+#instagram:hover {
+    transform: scale(1.4) rotate(360deg);
+}
+
+.message {
+    padding: 0 50px;
+}
+
+.message h3 {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    color: #97FFFF;
+    font-size: 1.3em;
+}
+
+.form-input {
+    position: relative;
+}
+
+.form-input input {
+    padding: 7px 35px 7px 10px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    width: 270px;
+    color: #fff;
+    font-size: 16px;
+    transition: 0.2s;
+    outline: none;
+    margin-bottom: 15px;
+}
+
+.form-input label {
+    position: absolute;
+    left: 10px;
+    top: 8px;
+    padding: 0 4px;
+    color: #fff;
+    transition: 0.2s;
+    pointer-events: none;
+}
+
+.form-input input:focus~label,
+.form-input input:valid~label {
+    top: -9px;
+    font-size: 13px;
+    background: #c6a58b;
+}
+
+.form-text {
+    position: relative;
+    margin-top: 5px;
+}
+
+.form-text textarea {
+    padding: 7px 35px 7px 10px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    width: 270px;
+    color: #fff;
+    font-size: 16px;
+    transition: 0.2s;
+    outline: none;
+    margin-bottom: 15px;
+    resize: none;
+}
+
+.form-text label {
+    position: absolute;
+    left: 10px;
+    top: 8px;
+    padding: 0 4px;
+    color: #fff;
+    transition: 0.2s;
+    pointer-events: none;
+}
+
+.form-text textarea:focus~label,
+.form-text textarea:valid~label {
+    top: -9px;
+    font-size: 13px;
+    background: #c6a58b;
+}
+
+.message button {
+    padding: 5px 17px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.message button:hover {
+    background: #dadada;
+}
+
+.open {
+    display: block;
+}
+
+
+

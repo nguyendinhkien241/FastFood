@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Manager</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+</head>
+<body>
+    <div class="grid wide main">
+        <div class="row no-gutters ">
+            <div class="sidebar col l-2">
+                <div class="logo">
+                    <img src="./assets/css/img/b2.jpg" alt="">
+                </div>
+
+                <div class="list-function">
+                    <ul>
+                        <li class="choose">
+                            <i class="fa-solid fa-book-open"></i>
+                            <h3>Menu</h3>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-couch"></i>
+                            <h3>Bàn</h3>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-kitchen-set"></i>
+                            <h3>Bếp</h3>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-carrot"></i>
+                            <h3>Nguyên liệu</h3>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-users"></i>
+                            <h3>Nhân viên</h3>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-chart-column"></i>
+                            <h3>Thống kê</h3>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="container col l-10">
+                <header>
+                    <h2>Menu</h2>
+                    <div class="info-account">
+                        <i class="fa-solid fa-bell"></i>
+                        <i class="fa-solid fa-user"></i>
+                        <p>Name</p>
+                    </div>
+                </header>
+                <div class="main-working">
+                    <div class="main-menu">
+                        <div class="menu-list">
+                            <div class="menu-header">
+                                <div class="header-sort">
+                                    <span>Sắp xếp</span>
+                                    <select name="Sort" id="">
+                                        <option value="">A -> Z</option>
+                                        <option value="">Z -> A</option>
+                                        <option value="">Tăng dần</option>
+                                        <option value="">Giảm dần</option>
+                                    </select>
+                                </div>
+    
+                                <div class="header-search">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                    <input type="text" placeholder="Tìm kiếm món ăn">
+                                </div>
+
+                                <div class="kind-of-food">
+                                    <span>Loại món</span>
+                                    <select name="Sort" id="">
+                                        <option value="">Gà</option>
+                                        <option value="">Burger</option>
+                                        <option value="">Combo</option>
+                                        <option value="">Cơm + Mì</option>
+                                        <option value="">Tráng miệng</option>
+                                        <option value="">Nước uống</option>
+                                    </select>
+                                </div>
+
+
+                            </div>
+
+                            <div class="list-food grid">
+                                <div class="food-row row no-gutters">
+                                    <div class="food-item col l-4 m-12 c-12">
+                                        <div class="food-card">
+                                            <div class="food-img">
+                                                <img src="./assets/css/img/Food/gà rán 1 miếng .jpg" alt="">
+                                            </div>
+                                            <h3 class="food-name">Gà rán (1 miếng)</h3>
+                                            <p class="food-price">35,000 VNĐ</p>
+                                            <button>Đặt</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="food-item col l-4 m-12 c-12">
+                                        <div class="food-card">
+                                            <div class="food-img">
+                                                <img src="./assets/css/img/Food/gà sốt hs.jpg" alt="">
+                                            </div>
+                                            <h3 class="food-name">Gà sốt HS (1 miếng)</h3>
+                                            <p class="food-price">40,000 VNĐ</p>
+                                            <button>Đặt</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="food-item col l-4 m-12 c-12">
+                                        <div class="food-card">
+                                            <div class="food-img">
+                                                <img src="./assets/css/img/Food/gà sốt đậu.jpg" alt="">
+                                            </div>
+                                            <h3 class="food-name">Gà sốt đậu</h3>
+                                            <p class="food-price">40,000 VNĐ</p>
+                                            <button>Đặt</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="food-row row no-gutters">
+
+                                    <div class="food-item col l-4 m-12 c-12">
+                                        <div class="food-card">
+                                            <div class="food-img">
+                                                <img src="./assets/css/img/Food/burger bò.jpg" alt="">
+                                            </div>
+                                            <h3 class="food-name">Burger bò</h3>
+                                            <p class="food-price">35,000 VNĐ</p>
+                                            <button>Đặt</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="food-item col l-4 m-12 c-12">
+                                        <div class="food-card">
+                                            <div class="food-img">
+                                                <img src="./assets/css/img/Food/burger cá.jpg" alt="">
+                                            </div>
+                                            <h3 class="food-name">Burger cá</h3>
+                                            <p class="food-price">35,000 VNĐ</p>
+                                            <button>Đặt</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="food-item col l-4 m-12 c-12">
+                                        <div class="food-card">
+                                            <div class="food-img">
+                                                <img src="./assets/css/img/Food/burger tôm.jpg" alt="">
+                                            </div>
+                                            <h3 class="food-name">Burger Tôm</h3>
+                                            <p class="food-price">38,000 VNĐ</p>
+                                            <button>Đặt</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="food-row row no-gutters">
+                                    <div class="food-item col l-4 m-12 c-12">
+                                        <div class="food-card">
+                                            <div class="food-img">
+                                                <img src="./assets/css/img/Food/cơm gà viên.jpg" alt="">
+                                            </div>
+                                            <h3 class="food-name">Cơm gà viên</h3>
+                                            <p class="food-price">45,000 VNĐ</p>
+                                            <button>Đặt</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="food-item col l-4 m-12 c-12">
+                                        <div class="food-card">
+                                            <div class="food-img">
+                                                <img src="./assets/css/img/Food/Mì Ý.jpg" alt="">
+                                            </div>
+                                            <h3 class="food-name">Mì Ý</h3>
+                                            <p class="food-price">32,000 VNĐ</p>
+                                            <button>Đặt</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="food-item col l-4 m-12 c-12">
+                                        <div class="food-card">
+                                            <div class="food-img">
+                                                <img src="./assets/css/img/Food/pepsi.jpg" alt="">
+                                            </div>
+                                            <h3 class="food-name">Pepsi</h3>
+                                            <p class="food-price">14,000 VNĐ</p>
+                                            <button>Đặt</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="new-order">
+                            <div class="main-order">
+                                <div class="header-order">
+                                    <div class="date-order">
+                                        <h3>New Order</h3>
+                                        <p class="current-date"></p>
+                                    </div>
+
+                                    <div class="select-table">
+                                        Bàn <select name="table" id="">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="food-order">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="main-table hide">
+
+                    </div>
+
+                    <div class="main-kitchen hide">
+
+                    </div>
+
+                    <div class="main-material hide">
+
+                    </div>
+
+                    <div class="main-staff hide">
+                        
+                    </div>
+
+                    <div class="main-statistical hide">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="./assets/app.js"></script>
+</body>
+</html>
